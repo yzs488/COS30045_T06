@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Energy Consumption</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/visualisations.css">
+</head>
+<body>
+    <header>
+        <h1>TV Energy Consumption</h1>
+    </header>
+    <main>
+        <div>
+            <h1>Energy Consumption for different TV screen types and sizes</h1>
+            <p>Most TV's on sale in Australia are LED and they vary considerably in energy consumption.</p>
+
+            <!-- Screen technology filter buttons -->
+            <div id="filters_screen"></div>
+
+            <!-- Histogram container -->
+            <div id="histogram" class="responsive-svg-container"></div>
+
+            <!-- Limitation note matching Canvas instruction -->
+            <p style="font-size: 13px; color: #6b5c4c; margin: 10px 0 6px 0;">
+                Only TVs with energy consumption less than 1,800 kWh/per year have been included.
+            </p>
+
+            <!-- Screen size filter buttons (Advance) -->
+            <div id="filters_size"></div>
+
+            <!-- Exercise 2: Scatterplot container -->
+            <div id="scatterplot" class="responsive-svg-container"></div>
+
+            <div class="body">
+                <h3>Data source</h3>
+                <p>
+                    <a href="https://data.gov.au/">
+                        Energy Rating Data for household appliances – Televisions
+                    </a><br>
+                    Downloaded Jan 2025
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 Data Visualisation Week 6</p>
+    </footer>
+
+    <!-- Scripts: Sequential Loading Order -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="js/shared-constants.js"></script>
+    <script src="js/interactions.js"></script>
+    <script src="js/histogram.js"></script>
+    <script src="js/scatterplot.js"></script>
+    <script src="js/load-data.js"></script>
+</body>
+</html>
